@@ -1,4 +1,4 @@
-package com.alexstark.webSteps;
+package com.alexstark.github.webSteps;
 
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;

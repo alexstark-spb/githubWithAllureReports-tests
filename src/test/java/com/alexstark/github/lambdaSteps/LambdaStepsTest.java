@@ -1,4 +1,4 @@
-package com.alexstark.lambdaSteps;
+package com.alexstark.github.lambdaSteps;
 
 import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.BeforeAll;

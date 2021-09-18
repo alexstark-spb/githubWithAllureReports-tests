@@ -1,4 +1,4 @@
-package com.alexstark.selenide;
+package com.alexstark.github.selenide;
 
 import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.BeforeAll;

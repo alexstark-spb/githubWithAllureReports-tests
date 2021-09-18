@@ -1,4 +1,4 @@
-package com.alexstark.webSteps;
+package com.alexstark.github.webSteps;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
