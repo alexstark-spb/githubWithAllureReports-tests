@@ -5,7 +5,7 @@
 - Gradle
 - Junit5
 - Selenide
-- Allure Report
+- Allure Report [Реализованы разные подходы: Lambda Steps, Annotated Steps + Attachments]
 
 ### Реализованы проверки:
 
