@@ -1,6 +1,8 @@
 package com.alexstark.github.selenide;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +12,7 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class SelenideTest {
+public class SelenideTestWithListener {
 
     @BeforeAll
     static void beforeAll() {
@@ -20,6 +22,8 @@ public class SelenideTest {
 
     @Test
     public void testRepositoryIssue() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+
         open(baseUrl);
         $("[placeholder='Search GitHub']").val("selenide/selenide").submit();
         $(byLinkText("selenide/selenide")).click();

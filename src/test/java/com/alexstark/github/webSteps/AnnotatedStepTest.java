@@ -1,7 +1,11 @@
 package com.alexstark.github.webSteps;
 
+import com.codeborne.selenide.Selenide;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.OutputType;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Configuration.startMaximized;
@@ -20,6 +24,13 @@ public class AnnotatedStepTest {
     }
 
     @Test
+    @Feature("Issues")
+    @Story("Поиск по Issue")
+    @Owner("Alex Derevyanko")
+    @Severity(SeverityLevel.NORMAL)
+    @Link(name = "GitHub", url = "https://github.com")
+    @Description("Здесь находится некий текст-описание для теста")
+    @DisplayName("Проверка отображения Issue на странице")
     public void shouldSeeIssueInRepository() {
         steps.openMainPage();
         steps.searchForRepository(REPOSITORY);
